@@ -1,0 +1,110 @@
+/* 🌈 Full-page gradient background */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3fc811, #7c3aed);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* 🎨 Login card */
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(165, 16, 16, 0.2);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+/* ✨ Animated fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Input styling */
+.login-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Input focus animation */
+.login-card input:focus {
+  box-shadow: 0 0 10px #a20e4b80;
+  background: rgba(207, 10, 10, 0.1);
+}
+
+/* Button styling */
+.login-card button {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #c470ae;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-card button:hover {
+  background: #3dcc05;
+  transform: scale(1.05);
+}
+
+.login-card button:active {
+  transform: scale(0.95);
+}
+
+/* Library info section */
+.library-info {
+  margin-top: 50px;
+  text-align: center;
+  max-width: 700px;
+  animation: slideUp 1s ease;
+}
+
+.library-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.library-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e7ff;
+}
+
+/* Slide-up animation for info */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width: 500px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .library-info {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+}

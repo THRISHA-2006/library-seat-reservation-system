@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  transition: all 0.3s ease;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: #4338ca;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 75px);
+  gap: 18px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.seat {
+  height: 75px;
+  width: 75px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.15) rotate(2deg);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.seat:active {
+  transform: scale(0.9);
+}
+
+.available {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.reserved {
+  background: orange;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 5px orange; }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px orange; }
+  100% { transform: scale(1); box-shadow: 0 0 5px orange; }
+}
+
+.booked {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.4); }
+  100% { transform: scale(1); }
+}
+
+.dashboard {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #e0e7ff;
+  animation: fadeIn 0.5s ease;
+}
+
+.notify {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #dbeafe;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slot-label {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.filters select {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* 🌙 DARK MODE */
+.dark {
+  background: #111827;
+  color: white;
+}
+
+.dark .seat.available {
+  background: #065f46;
+}
+
+.dark .dashboard {
+  background: #1f2937;
+}
+
+.dark button {
+  background: #374151;
+}
